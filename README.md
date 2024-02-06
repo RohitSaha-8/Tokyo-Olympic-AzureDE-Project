@@ -1,25 +1,34 @@
-Data Engineering - YouTube Analysis Project
-Overview
-This project aims to securely manage, streamline, and perform analysis on the structured and semi-structured YouTube videos data based on the video categories and the trending metrics.
+# Tokyo Olympic Data Engineering Project
 
-Project Goals
-Learn how to build a data lake from scratch using Amazon S3
-Understand the difference between data lake and data warehouse
-Design data lake and build a data pipeline around it
-Utilize AWS services such as SNS and IAM
-Write SQL queries to analyze data using Amazon Athena
-Ingest data incrementally and build a proper schema
-Visualize data using a dashboard
-Services we will be using
-Amazon S3: When it comes to handling large-scale storage needs while maintaining data availability, security, and performance, Amazon S3 shines. It's the ideal choice for establishing a robust storage foundation.
-AWS IAM: For secure access management to AWS services and resources, AWS IAM steps up. Use it to control permissions, ensuring data integrity and confidential handling throughout your project.
-QuickSight: Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service built for the cloud.
-AWS Glue: Simplify data integration and preparation with AWS Glue. When you need to organize and combine data for analytics, ML, or app development, Glue's serverless approach streamlines the process.
-AWS Lambda: If you want to automate tasks without worrying about server management, AWS Lambda is the solution. It's perfect for triggering actions based on events, boosting workflow efficiency.
-AWS Athena: When real-time querying of data without the need for data loading is on the agenda, turn to AWS Athena. It's your tool for direct querying of data residing in Amazon S3, minimizing data movement.
-Dataset Used
-The Kaggle dataset provides a comprehensive collection of daily statistics on popular YouTube videos over an extended period of time. Each region has its own file, containing up to 200 trending videos published every day. The data includes information such as video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count. Additionally, a category_id field is included in the JSON file linked to the region, which varies by area. The data is presented in CSV format for easy analysis and manipulation.
+## Overview
+This project is about building an end-to-end data engineering project on Azure Cloud. It uses Azure Data Factory to extract Olympic data from an API and load it onto Azure Data Lake. Spark code is used for transformation in Databricks and Synapse Analytics for analysis.
 
-https://www.kaggle.com/datasets/datasnaek/youtube-new
+## Services Used
+1. Azure Data Factory
+2. Azure Data Lake Gen 2
+3. Azure Databricks
+4. Azure Synapse Analytics
+5. Microsoft PowerBi
 
-Architecture Diagram
+## Steps
+1. The data set contains information about 11,000 athletes, 46 disciplines, and 743 teams participating in the Tokyo Olympics 2021.
+2. Create an Azure account and subscription.
+3. Create a storage account and data factory in Azure.
+4. Extract and load data from GitHub to Azure Data Lake storage using Azure Data Factory.
+5. Data from GitHub is stored using Azure Data Factory.
+6. Create a connection between Azure Databricks and Azure Data Lake Storage.
+7. Create connection to Azure data Factory and mounted data Lake.
+8. Data transformation using Apache Spark and writing data onto target location.
+9. Setting up Synapse Analytics workspace for Tokyo Olympic data storage.
+10. Loading and transforming data in Synapse for Olympic analytics.
+11. Validating column names and deploying changes and Using SQL for data analysis and calculations.
+12. Create connection between Azure Synapse and Microsoft PowerBi for final visualization.
+
+## Dataset used
+https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo
+
+## Architecture
+![Olympic Data - Architecture](https://github.com/RohitSaha-8/Tokyo-Olympic-AzureDE-Project/assets/63776719/c782866f-c4c7-4e1f-b9a4-ba38600f2d25)
+
+
+
